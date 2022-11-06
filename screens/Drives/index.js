@@ -104,7 +104,7 @@ export default function Drives() {
   }
 
   return (
-    <View className={style["drive-wrapper"]}>
+    <ScrollView className={style["drive-wrapper"]}>
       <Text className={style["testing-text"]}>Vaccination Drives</Text>
       <View>
         {
@@ -157,7 +157,7 @@ export default function Drives() {
           </View>
         </View>
       </Modal>
-    </View>
+    </ScrollView>
   )
 }
 
