@@ -1,0 +1,78 @@
+.students-wrapper{
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.testing-text{
+    color: #000;
+    margin: 24px auto;
+    font-size: 32px;
+}
+
+.table{}
+.table-header{
+    font-weight: bold;
+    text-align: center;
+}
+.table-data{}
+
+.table-cta-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-cta-btn-text{
+    color: red;
+}
+
+.table-graphic{
+    height: 15px;
+    width: 15px;
+}
+.cta-wrapper{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // flex: 1;
+}
+
+.cta-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+}
+
+.cta-btn-text{
+    text-align: center;
+    font-size: 16px;
+}
+
+.input-textbox{
+    width: 210px;
+    background: white;
+    color: #000;
+    border: 1px solid #00000052;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.textbox-label{
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+
+.form-input-wrapper{
+    width: 70%;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,75 @@
+.home-wrapper{
+    flex: 1;
+}
+
+.testing-text{    
+    color: #000;
+    text-shadow: 0px 0px 8px #7a7a7a8e;
+    margin: 24px auto;
+    font-size: 32px;
+    text-align: center;
+}
+
+.analytics-cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.analytics-card{
+    height: 140px;
+    width: 140px;
+    background: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.graphic{
+    height: 60px;
+    width: 60px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.counter{
+    font-size: 14px;
+}
+
+.cta-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.cta-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: white;
+    // width: 33.33%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7.8%;
+}
+
+.graphic-small{
+    height: 20px;
+    width: 20px;
+}
+
+.cta-btn-text{
+    text-align: center;
+}

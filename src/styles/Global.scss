@@ -1,0 +1,10 @@
+$primary: #AAFFCC;
+
+$dark0: black;
+
+$normal: 15;
+
+@mixin headingText() {
+    font-size: $normal;
+    color: $dark0;
+}
