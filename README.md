@@ -5,7 +5,7 @@
 
 ### Frontend Application Powered By
 [![React Native](https://www.pngitem.com/pimgs/m/514-5142665_react-native-transparent-react-native-logo-png-png.png)](https://reactnative.dev/)
-[![Expo](https://lever-client-logos.s3.us-west-2.amazonaws.com/9db6eb00-4e20-4977-8145-359ed01c2eee-1614024984718.png)](https://expo.dev/)
+[![Expo](https://miro.medium.com/max/512/1*3o8TOSojT64ChGpjop0USA.png)](https://expo.dev/)
 
 ### Assignment Task
 ###### Recently the Government of India has given permission to vaccinate the school going children under age of eighteen with the Covid vaccination. The government is also thinking to manage this effort at the school level as it will be easier to track and manage the vaccination drive progress. Also parents will be assured about the safety of the ward as all the students belonging to a particular school will be vaccinated in the one go providing a safe learning environment for all. 
