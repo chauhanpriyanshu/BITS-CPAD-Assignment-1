@@ -75,7 +75,7 @@ export default function Students() {
 
   const handleAddStudent = () => {
     dispatch(addStudentDetail({
-      "students": [studentName,date,vaccineName,vaccineStatus]
+      "students": [studentName,date,vaccineStatus,vaccineName]
     }))
   }
 

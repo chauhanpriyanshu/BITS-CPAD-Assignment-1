@@ -10,12 +10,13 @@ export default function Drives() {
   const state = useSelector(state=>{
     return {vaccDrive : state.VaccDrive}
   })
-  const header = ['Vaccine Name', 'Vaccination Date', 'Total Vaccines', 'Actions']
+  const header = ['Vaccine Name', 'Vaccination Date', 'Total Vaccines', 'Vaccines Used', 'Actions']
   const [data, setdata] = useState(undefined)
   const [modalVisible, setModalVisible] = useState(false);
   const [vaccineName, onChangeVaccineName] = React.useState("");
   const [date, onChangeDate] = React.useState("");
   const [vaccineTotal, onChangeVaccineTotal] = React.useState("");
+  const [vaccineUsed, setvaccineUsed] = React.useState("");
   const [modalType, setmodalType] = useState("")
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Drives() {
           item.name,
           item.vaccinationDate,
           item.vaccinationCount,
+          item.vaccinationUsed!=null?item.vaccinationUsed:0,
           <TouchableOpacity onPress={()=>{handleModalOpen("edit", item)}} className={style["table-cta-btn"]}>
             <Image className={style["table-graphic"]} source={require('../../assets/edit.png')} />
           </TouchableOpacity>
@@ -49,6 +51,7 @@ export default function Drives() {
       onChangeVaccineName("")
       onChangeDate("")
       onChangeVaccineTotal("")
+      setvaccineUsed("")
       Alert.alert("Drive data added successfully")
     }
     if(state.vaccDrive.addDriveDetailsFailure==true){
@@ -62,6 +65,7 @@ export default function Drives() {
       onChangeVaccineName("")
       onChangeDate("")
       onChangeVaccineTotal("")
+      setvaccineUsed("")
       Alert.alert("Drive data edited successfully")
     }
     if(state.vaccDrive.updateDriveDetailsFailure==true){
@@ -72,13 +76,13 @@ export default function Drives() {
 
   const handleAddDrive = () => {
     dispatch(addDriveDetail({
-      "drive":[vaccineName,date,Number(vaccineTotal)]
+      "drive":[vaccineName,date,Number(vaccineTotal),Number(vaccineUsed)]
     }))
   }
 
   const handleEditDrive = () => {
     dispatch(updateDriveDetail({
-      "drive":[date,Number(vaccineTotal),vaccineName]
+      "drive":[date,Number(vaccineTotal),Number(vaccineUsed),vaccineName]
     }))
   }
 
@@ -88,11 +92,13 @@ export default function Drives() {
       onChangeVaccineName("")
       onChangeDate("")
       onChangeVaccineTotal("")
+      setvaccineUsed("")
     }
     if(type=="edit"){
       onChangeVaccineName(data.name)
       onChangeDate(data.vaccinationDate)
       onChangeVaccineTotal(String(data.vaccinationCount))
+      setvaccineUsed(String(data.vaccinationUsed))
     }
     setModalVisible(!modalVisible)
   }
@@ -131,6 +137,8 @@ export default function Drives() {
               <TextInput className={style["input-textbox"]} onChangeText={onChangeDate} value={date} />
               <Text className={style["textbox-label"]}>Total Vaccines:</Text>
               <TextInput className={style["input-textbox"]} onChangeText={onChangeVaccineTotal} value={vaccineTotal} />
+              <Text className={style["textbox-label"]}>Total Vaccines Used:</Text>
+              <TextInput className={style["input-textbox"]} onChangeText={setvaccineUsed} value={vaccineUsed} />
             </View>
             {
               modalType=="add"

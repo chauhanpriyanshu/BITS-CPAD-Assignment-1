@@ -117,7 +117,8 @@ const VaccDrive = (state = initialState, action) => {
                 data2.push({
                     "name": item[0],
                     "vaccinationDate": item[1],
-                    "vaccinationCount": item[2]
+                    "vaccinationCount": item[2],
+                    "vaccinationUsed": item[3]
                 })
             })
             return {
